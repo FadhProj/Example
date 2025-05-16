@@ -44,7 +44,7 @@
                         </tr>
                         <%  }
                         } else { %>
-                        <tr><td colspan="4">Data kosong.</td></tr>
+                        <tr><td colspan="4">Empty Data.</td></tr>
                         <% }%>
                     </table>
                 </div>

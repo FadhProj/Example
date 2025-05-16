@@ -15,6 +15,6 @@
     </head>
     <body>
         <jsp:include page="/includes/navbar.jsp" /> <!-- Include navbar -->
-        <h1>Berhasil</h1>
+        <h1>success</h1>
     </body>
 </html>
