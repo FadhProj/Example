@@ -10,31 +10,7 @@
     </head>
     <body>
         <div class="container">
-            <%-- <jsp:include page="/includes/navbar.jsp" /> <!-- Include navbar -->  --%>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="${pageContext.request.contextPath}/img/Logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                    </a>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="${pageContext.request.contextPath}/login/login.jsp">Login</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
+            <jsp:include page="/includes/navbar.jsp" />
             <h1 id="judul">Welcome</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a sollicitudin diam, vel vestibulum ipsum. Fusce imperdiet enim eget mauris blandit, non blandit enim aliquet. Praesent ac sem ornare metus faucibus viverra. Proin vitae tincidunt leo. Morbi nibh arcu, tempus pulvinar tortor vel, auctor dapibus felis. Vestibulum eget lobortis lacus. Pellentesque sit amet rhoncus mauris. Vestibulum eget placerat tortor. Donec tincidunt enim diam, vitae lacinia eros pretium feugiat. Ut ut quam maximus, accumsan nibh a, posuere nulla. Fusce facilisis sit amet metus id pharetra. </p>
 

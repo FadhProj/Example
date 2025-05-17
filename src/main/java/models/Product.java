@@ -4,6 +4,9 @@
  */
 package models;
 
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
 /**
  *
  * @author fadhlan
@@ -26,8 +29,27 @@ public class Product {
     public Product(int id) {
         this.id = id;
     }
-
     
+    Product toModel(ResultSet rs){
+        try {
+            return new Product (
+            rs.getInt("id"),
+            rs.getString("name"),
+            rs.getDouble("price")
+            );
+        } catch (Exception e) {
+            setMessage(e.getMessage());
+        }
+        return null;
+    }
+
+    /*public ArrayList<Product>(){
+        ArrayList<Product> res = new ArrayList<>;
+        try {
+            ResultSet rs = getData("")
+        } catch (Exception e) {
+        }
+    }*/
 
     public int getId() {
         return id;
@@ -51,5 +73,9 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    private void setMessage(String message) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
