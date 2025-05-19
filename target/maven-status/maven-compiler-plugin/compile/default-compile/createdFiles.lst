@@ -1,3 +1,5 @@
+dbConnect.class
+main.class
 controller\ProductController.class
 controller\AuthController.class
 models\Product.class

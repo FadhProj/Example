@@ -21,6 +21,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/login/login.jsp">Login</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/login/login.jsp">Registrasi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/login/login.jsp">About</a>
+                </li>
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

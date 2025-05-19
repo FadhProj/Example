@@ -12,44 +12,24 @@ import java.util.ArrayList;
  * @author fadhlan
  */
 public class Product {
+
     private int id;
     private String name;
     private double price;
 
     public Product() {
-        
+
     }
 
     public Product(int id, String name, double price) {
         this.id = id;
         this.name = name;
         this.price = price;
-    }  
+    }
 
     public Product(int id) {
         this.id = id;
     }
-    
-    Product toModel(ResultSet rs){
-        try {
-            return new Product (
-            rs.getInt("id"),
-            rs.getString("name"),
-            rs.getDouble("price")
-            );
-        } catch (Exception e) {
-            setMessage(e.getMessage());
-        }
-        return null;
-    }
-
-    /*public ArrayList<Product>(){
-        ArrayList<Product> res = new ArrayList<>;
-        try {
-            ResultSet rs = getData("")
-        } catch (Exception e) {
-        }
-    }*/
 
     public int getId() {
         return id;
@@ -76,6 +56,10 @@ public class Product {
     }
 
     private void setMessage(String message) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private ResultSet getData(String select__from_product) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

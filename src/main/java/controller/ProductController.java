@@ -65,20 +65,22 @@ public class ProductController extends HttpServlet {
         String menu = request.getParameter("menu"); // GET PARAM "MENU" FROM URL
 
         HttpSession session = request.getSession(); // ACTIVATE SESSION
-        
+
         // DEFAULT INITIAL DATA. OPTIONAL GET FROM DATABASE
         if (session.getAttribute("list") == null) {
+            //ArrayList<Product> prods = new Product().get();
             ArrayList<Product> prods = new ArrayList<>();
             prods.add(new Product(1, "Nasi Goreng", 15000));
             prods.add(new Product(2, "Nasi Mawud", 20000));
             prods.add(new Product(3, "Mie Goreng", 15000));
             prods.add(new Product(4, "Nasi Gila", 20000));
             prods.add(new Product(5, "Mie Kolor", 20000));
+
             session.setAttribute("list", prods);
         }
 
         ArrayList<Product> prods = (ArrayList<Product>) session.getAttribute("list");
-        
+
         if (menu == null) {
             request.setAttribute("title", "Daftar Product");
             request.getRequestDispatcher("product/view_product.jsp").forward(request, response);
@@ -117,11 +119,11 @@ public class ProductController extends HttpServlet {
         String id = request.getParameter("id");
         String name = request.getParameter("name");
         double price = 0;
-                
-        if (!"del".equals(action)){
+
+        if (!"del".equals(action)) {
             price = Double.parseDouble(request.getParameter("price"));
         }
-        
+
         ArrayList<Product> prods = (ArrayList<Product>) session.getAttribute("list");
 
         if (id == null) {
@@ -134,7 +136,7 @@ public class ProductController extends HttpServlet {
             prods.add(newProduct);
         } else if (action == null) {
             // UPDATE
-             int pid = Integer.parseInt(id);
+            int pid = Integer.parseInt(id);
             for (Product p : prods) {
                 if (p.getId() == pid) {
                     p.setName(name);

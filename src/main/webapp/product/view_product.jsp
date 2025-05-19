@@ -18,7 +18,7 @@
                     <table class="table table-bordered table-striped">
                         <tr>
                             <th>No.</th>
-                            <<th>id</th>
+                            <th>id</th>
                             <th>Name</th>
                             <th>Price</th>
                             <th>Action</th>
